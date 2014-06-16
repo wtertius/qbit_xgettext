@@ -18,6 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: $BIN/files/file.pl:41
+msgid "(something in parenthetical)"
+msgstr ""
+
 #: $BIN/files/file.pl:37
 msgid ""
 "1\n"

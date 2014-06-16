@@ -30,7 +30,7 @@ sub extract_from_file {
 
     my $text = $self->clean(readfile($filename));
 
-    my $func_re_str = '(?:^|\W)(' . join('|', sort {length($b) <=> length($a)} keys(%FUNCS)) . ')(\W*\()';
+    my $func_re_str = '(?:^|\W)(' . join('|', sort {length($b) <=> length($a)} keys(%FUNCS)) . ')(\W*?\()';
 
     my $line = 1;
 
