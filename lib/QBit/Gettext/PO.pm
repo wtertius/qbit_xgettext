@@ -13,12 +13,11 @@ sub add_message {
 
     $self->{'__MESSAGES__'} ||= {};
 
-    my $msg =
-      $self->{'__MESSAGES__'}{join($_SEPARATOR, $opts{'context'} || '', $opts{'message'}, $opts{'plural'} || '')} ||=
-      {};
+    my $msg = $self->{'__MESSAGES__'}{join($_SEPARATOR, $opts{'context'} || '', $opts{'message'})} ||= {};
 
-    if (keys($msg)) {
+    if (keys(%$msg)) {
         push(@{$msg->{'lines'}}, "$opts{'filename'}:$opts{'line'}");
+        $msg->{'plural'} = $opts{'plural'} if defined($opts{'plural'}) && !defined($msg->{'plural'});
     } else {
         push_hs($msg, hash_transform(\%opts, [qw(context message plural)]));
         $msg->{'lines'} = ["$opts{'filename'}:$opts{'line'}"];
@@ -54,13 +53,8 @@ sub as_string {
 
     my $str = $self->header();
 
-    foreach my $msg (
-        sort {
-            $a->{'message'} cmp $b->{'message'}
-              || ($a->{'context'} || '') cmp($b->{'context'} || '')
-              || ($a->{'plural'}  || '') cmp($b->{'plural'}  || '')
-        } values(%{$self->{'__MESSAGES__'}})
-      )
+    foreach my $msg (sort {$a->{'message'} cmp $b->{'message'} || ($a->{'context'} || '') cmp($b->{'context'} || '')}
+        values(%{$self->{'__MESSAGES__'}}))
     {
         $str .= "#: $_\n" foreach @{$msg->{'lines'}};
 

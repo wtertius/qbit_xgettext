@@ -40,6 +40,8 @@ gettext("1
 
 gettext('(something in parenthetical)');
 
+gettext('Server');
+
 =head 1
 
 POD at EOF

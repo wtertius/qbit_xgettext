@@ -30,9 +30,6 @@ msgid ""
 msgstr ""
 
 #: $BIN/files/file.pl:30
-msgid "DServer"
-msgstr ""
-
 #: $BIN/files/file.pl:31
 msgid "DServer"
 msgid_plural "DServers"
@@ -45,6 +42,7 @@ msgstr ""
 
 #: $BIN/files/file.pl:20
 #: $BIN/files/file.pl:26
+#: $BIN/files/file.pl:43
 msgid "Server"
 msgid_plural "Servers"
 msgstr[0] ""
