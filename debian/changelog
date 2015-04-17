@@ -1,16 +1,16 @@
-qbit-xgettext (0.003) raring; urgency=low
+libtertiusqbit-xgettext-perl (0.003) raring; urgency=low
 
   * gettext and ngettext have the same message id
 
  -- Sergei Svistunov <sergei-svistunov@yandex.ru>  Thu, 15 Jan 2015 16:31:55 +0400
 
-qbit-xgettext (0.002) raring; urgency=low
+libtertiusqbit-xgettext-perl (0.002) raring; urgency=low
 
   * Cannot find valid parameters for function
 
  -- Sergei Svistunov <sergei-svistunov@yandex.ru>  Mon, 16 Jun 2014 19:29:33 +0400
 
-qbit-xgettext (0.001) raring; urgency=low
+libtertiusqbit-xgettext-perl (0.001) raring; urgency=low
 
   * Initial commit
 
